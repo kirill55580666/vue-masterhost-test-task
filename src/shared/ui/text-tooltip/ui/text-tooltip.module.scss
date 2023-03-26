@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  align-self: stretch;
+  .image {
+    width: 100%;
+  }
+  &:hover {
+    .tip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .tip {
+    visibility: hidden;
+    width: 100%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}

@@ -9,11 +9,11 @@
  * Получение env-переменной
  * @throwable
  */
- const getEnvVar = (key: string) => {
-    if (import.meta.env[key] === undefined) {
-        throw new Error(`Env variable ${key} is required`);
-    }
-    return import.meta.env[key] || "";
+const getEnvVar = (key: string) => {
+  if (import.meta.env[key] === undefined) {
+    throw new Error(`Env variable ${key} is required`);
+  }
+  return import.meta.env[key] || "";
 };
 
 /** API entrypoint */

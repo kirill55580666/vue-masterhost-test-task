@@ -1,0 +1,115 @@
+.container {
+  border: 1px solid var(--border-color);
+  width: 1200px;
+  min-height: 80px;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 50%;
+  
+  @media (max-width: 480px) {
+    flex: 0 0 100%;
+  }
+
+  .wrapper {
+    margin-left: 40px;
+    max-width: 80%;
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    @media (max-width: 980px) {
+      font-size: 18px;
+    }
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
+    .brand {
+      margin-right: 10px;
+    }
+    .name {
+      font-weight: 600;
+    }
+  }
+
+  .image {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    position: relative;
+    animation: imageAnimation 1s;
+  }
+
+  .properties {
+    font-size: 18px;
+    margin-top: 56px;
+    @media (max-width: 980px) {
+      font-size: 14px;
+    }
+    @media (max-width: 600px) {
+      font-size: 10px;
+    }
+    .property {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+  }
+  .select {
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+  }
+  .price {
+    margin-top: 20px;
+    font-size: 32px;
+    @media (max-width: 980px) {
+      font-size: 20px;
+    }
+    &__currency {
+      font-style: italic;
+    }
+  }
+  .button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+    @media (max-width: 980px) {
+      button {
+        width: 140px;
+        height: 40px;
+        font-size: 20px;
+        padding: 5px 20px;
+      }
+    }
+  }
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.submitButton {
+  float: right;
+}
+
+@keyframes imageAnimation {
+  from {
+    top: -500px;
+    opacity: 0;
+    rotate: (45deg);
+  }
+  to {
+    top: 0;
+    opacity: 1;
+    rotate: (0deg);
+  }
+}

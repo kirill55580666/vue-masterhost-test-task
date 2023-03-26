@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import {Routing} from 'pages';
+import MainPage from "pages/main-page";
 </script>
 
 <template>
   <div class="app">
-    <Routing />
+    <MainPage />
   </div>
 </template>
 

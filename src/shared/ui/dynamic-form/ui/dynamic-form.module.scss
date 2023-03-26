@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: #FFFFFF;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.item {
+  position: relative;
+  flex: 0 0 calc(50% - 8px);
+  max-width: calc(50% - 8px);
+  height: 50px;
+  @media (max-width: 480px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.button {
+  visibility: hidden;
+}
